@@ -3,16 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-const trendingPost = (await getCollection("trending")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
 ---
 
 <!doctype html>
@@ -22,58 +13,7 @@ const trendingPost = (await getCollection("trending")).sort(
   </head>
   <body>
     <Header />
-    <main class="flex flex-col md:px-14 px-4">
-      <section>
-        <h1
-          class="text-center text-3xl md:text-4xl mt-14 md:mt-32 mb-4 md:mb-7 font-black"
-        >
-          Top Stories
-        </h1>
-        <ul
-          class="trending grid grid-cols-1 md:grid-cols-[2fr_1.5fr_1.5fr] gap-3"
-        >
-          {
-            trendingPost.map((post) => (
-              <li class="relative">
-                <a class="trending-link" href={`/blog/${post.id}/`}>
-                  <img src={post.data.heroImage} alt="" />
-                  <div>
-                    <h3 class="title font-black text-xl my-2">{post.data.title}</h3>
-                    <h4 class=" md:hidden">{post.data.description}</h4>
-                    <h5 class="md:my-2 my-1">#{post.data.tag}</h5>
-                    <p class="">
-                      <FormattedDate date={post.data.pubDate} />
-                    </p>
-                  </div>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-      <section class="mt-20">
-        <ul class="grid grid-cols-4">
-          {
-            posts.map((post) => (
-              <li class="">
-                <a href={`/blog/${post.id}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    src={post.data.heroImage}
-                    alt=""
-                  />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
+    <main class="flex flex-col md:px-14 px-4">welcomr home</main>
     <Footer />
   </body>
 </html>
