@@ -1,6 +1,6 @@
 ---
 title: 'Vitae ultricies leo integer malesuada'
-description: 'Lorem ipsum dolor sit amet'
+description: 'Lorem ipsum dolor sit amet Tellus molestie nunc non blandit massa'
 tag: 'travel'
 pubDate: 'Jul 08 2022'
 heroImage: '/trending-2.jpg'

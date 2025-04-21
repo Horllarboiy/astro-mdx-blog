@@ -1,10 +1,10 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
+import FormattedDate from "../components/FormattedDate.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -25,7 +25,7 @@ const trendingPost = (await getCollection("trending")).sort(
     <main class="flex flex-col md:px-14 px-4">
       <section>
         <h1
-          class="text-center text-3xl md:text-4xl mt-14 md:mt-32 mb-7 font-black"
+          class="text-center text-3xl md:text-4xl mt-14 md:mt-32 mb-4 md:mb-7 font-black"
         >
           Top Stories
         </h1>
@@ -38,8 +38,8 @@ const trendingPost = (await getCollection("trending")).sort(
                 <a class="trending-link" href={`/blog/${post.id}/`}>
                   <img src={post.data.heroImage} alt="" />
                   <div>
-                    <h4 class="title font-black">{post.data.title}</h4>
-                    <h4 class="title font-black md:hidden">{post.data.description}</h4>
+                    <h3 class="title font-black text-xl my-2">{post.data.title}</h3>
+                    <h4 class=" md:hidden">{post.data.description}</h4>
                     <h5 class="md:my-2 my-1">#{post.data.tag}</h5>
                     <p class="">
                       <FormattedDate date={post.data.pubDate} />

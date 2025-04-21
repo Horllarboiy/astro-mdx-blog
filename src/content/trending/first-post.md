@@ -1,8 +1,8 @@
 ---
 title: 'Euismod elementum nisi quis eleifend quam adipiscing.'
-description: 'Lorem ipsum dolor sit amet'
+description: 'Lorem ipsum dolor sit amet Tellus molestie nunc non blandit massa'
 tag: 'lifestyle'
-pubDate: 'Jul 08 2022'
+pubDate: 'Jul 09 2022'
 heroImage: '/trending-1.jpg'
 ---
 

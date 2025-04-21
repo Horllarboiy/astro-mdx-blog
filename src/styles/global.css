@@ -79,22 +79,19 @@ body {
 	background-size: cover;
 }
 
+.trending li:first-child h4 {
+	display: none;
+}
+
+.trending li:nth-child(n+4) h4 {
+	display: none;
+}
+
 code {
 	padding: 2px 5px;
 	background-color: rgb(var(--gray-light));
 	border-radius: 2px;
 }
-
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-
-pre>code {
-	all: unset;
-}
-
-
 
 
 @media (max-width: 720px) {
@@ -137,6 +134,18 @@ pre>code {
 
 	.trending li img {
 		display: none;
-		margin-top: 4rem;
+
+	}
+
+	.trending li {
+		margin-top: 2rem;
+	}
+
+	.trending li:first-child h4 {
+		display: none;
+	}
+
+	.trending li:nth-child(n+4) h4 {
+		display: none;
 	}
 }
