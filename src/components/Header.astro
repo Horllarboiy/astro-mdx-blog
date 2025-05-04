@@ -3,16 +3,22 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header>
-  <nav>
-    <h2 class="font-bold"><a href="/blog">{SITE_TITLE}</a></h2>
-    <div class="internal-links hidden md:flex">
-      <HeaderLink href="/blog">Travel Inspiration</HeaderLink>
-      <HeaderLink href="/about">Travel Guide</HeaderLink>
-      <HeaderLink href="/about">Travel Contiki</HeaderLink>
+<header class="md:px-10 px-3">
+  <nav class="flex justify-between items-center">
+    <h2 class="lg:w-24 w-[4.5rem]">
+      <a href="/blog">
+        <img src="/logo.png" alt="logo" />
+      </a>
+    </h2>
+    <div class="internal-links hidden md:flex text-[19px]">
+      <HeaderLink href="/blog">About</HeaderLink>
+      <HeaderLink class="mx-7" href="/about">Work</HeaderLink>
+      <HeaderLink href="/about">Blog</HeaderLink>
+      <HeaderLink class="mx-7" href="/about">Contact</HeaderLink>
+      <HeaderLink href="/about">Pricing</HeaderLink>
     </div>
-    <div class="social-links">
-      <a href="https://m.webtoo.ls/@astro" target="_blank">
+    <div class="hidden md:flex">
+      <a href="/" target="_blank">
         <span class="sr-only">Follow Astro on Mastodon</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
           ><path
@@ -21,7 +27,7 @@ import { SITE_TITLE } from "../consts";
           ></path></svg
         >
       </a>
-      <a href="https://twitter.com/astrodotbuild" target="_blank">
+      <a class="mx-4" href="https://twitter.com/astrodotbuild" target="_blank">
         <span class="sr-only">Follow Astro on Twitter</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
           ><path
@@ -42,45 +48,3 @@ import { SITE_TITLE } from "../consts";
     </div>
   </nav>
 </header>
-<style>
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
-
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0.5rem 4rem;
-  }
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
-  }
-  nav a:hover {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
-  .social-links,
-  .social-links a {
-    display: flex;
-  }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0.5rem .7rem;
-    }
-  }
-</style>

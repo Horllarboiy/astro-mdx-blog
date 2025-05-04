@@ -51,9 +51,6 @@ body {
 	line-height: 1.7;
 }
 
-* {
-	color: var(--foreground);
-}
 
 .trending li:first-child div {
 	position: absolute;
