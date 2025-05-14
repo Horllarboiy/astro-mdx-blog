@@ -8,7 +8,7 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import AnimatedBox from "../components/AnimatedBox";
 import FadeInBox from "../components/FadeInBox";
-import { motion } from "motion/react";
+import CountUpNum from "../components/CountUp";
 ---
 
 <!doctype html>
@@ -19,9 +19,9 @@ import { motion } from "motion/react";
   <body>
     <Header client:load />
     <main class="flex flex-col md:px-10 px-4 text-white">
-      <section class="min-h-screen md:py-10 text-white bg-[#111111]">
-        <div class="flex md:flex-row flex-col md:py-16 py-5 justify-between">
-          <div class="flex flex-col md:w-[40%] md:mx-auto px-6">
+      <section class="md:py-10 text-white bg-[#111111]">
+        <div class="flex lg:flex-row flex-col md:py-16 py-5 justify-between">
+          <div class="flex flex-col md:w-4/5 lg:w-[40%] md:mx-auto px-6">
             <AnimatedBox client:load>
               <h1
                 class="md:text-7xl text-[37px] md:leading-24 font-black uppercase"
@@ -31,8 +31,8 @@ import { motion } from "motion/react";
                 >
               </h1>
               <p class="text-[#b3b3b3] text-[19px] my-3 leading-tight md:my-5">
-                Discover the power of Noira, the ultimate Webflow template
-                designed for digital marketing agencies.
+                Explicabo incidunt odio nemo eum, voluptatibus nulla excepturi
+                nobis a dolore odit sit et alias consequatur vero.
               </p>
             </AnimatedBox>
             <FadeInBox client:load>
@@ -49,7 +49,7 @@ import { motion } from "motion/react";
               </div>
             </FadeInBox>
           </div>
-          <div class="md:w-2/4">
+          <div class="lg:w-2/4 md:mt-10 lg:mt-0">
             <FadeInBox client:load>
               <div class="px-10">
                 <img
@@ -95,59 +95,62 @@ import { motion } from "motion/react";
             </FadeInBox>
           </div>
         </div>
-        <h2 class="font-bold md:ml-[4rem] ml-10 text-[#b3b3b3]">
+        <h2 class="font-bold md:ml-[4rem] ml-10 mt-3 text-[#b3b3b3]">
           Trusted by top brands worldwide
         </h2>
-        <ul class="flex items-center py-4 md:ml-[4rem]">
-          <li class="w-28 mr-16">
+       <div class="w-full overflow-hidden">
+         <ul class="flex md:items-center py-4 md:ml-[4rem] scroller">
+          <li class="lg:w-28 w-20 md:mr-16 mr-4">
             <img src="/trusted-logos/Logo01.svg" alt="logo" />
           </li>
-          <li class="w-28 mr-16">
+          <li class="lg:w-28 w-20 md:mr-16 mr-4">
             <img src="/trusted-logos/Logo02.svg" alt="logo" />
           </li>
-          <li class="w-28 mr-16">
+          <li class="lg:w-28 w-20 md:mr-16 mr-4">
             <img src="/trusted-logos/Logo03.svg" alt="logo" />
           </li>
-          <li class="w-28 mr-16">
+          <li class="lg:w-28 w-20 md:mr-16 mr-4">
             <img src="/trusted-logos/Logo04.svg" alt="logo" />
           </li>
-          <li class="w-28 mr-16">
+          <li class="lg:w-28 w-20 md:mr-16 mr-4">
             <img src="/trusted-logos/Logo05.svg" alt="logo" />
           </li>
-          <li class="w-28 mr-16">
+          <li class="lg:w-28 w-20 md:mr-16 mr-4">
             <img src="/trusted-logos/Logo06.svg" alt="logo" />
           </li>
-          <li class="w-28 mr-16">
+          <li class="lg:w-28 w-20 md:mr-16 mr-4">
             <img src="/trusted-logos/Logo07.svg" alt="logo" />
           </li>
         </ul>
+       </div>
       </section>
 
       <section>
         <div
-          class="flex md:flex-row flex-col justify-between items-center py-32"
+          class="flex lg:flex-row
+           flex-col justify-between items-center py-32"
         >
           <h1
-            class="md:text-[38px] text-4xl leading-12 font-black w-[95%] md:w-[37%]"
+            class="md:text-[38px] text-4xl leading-12 font-black w-[95%] md:w-[80%] lg:w-[37%]"
           >
-            <span class="bg-white text-black rounded-xl px-2">Helping.</span> Companies
+            <span class="bg-white text-black rounded-xl px-2">Helping</span> Companies
             grow beyond their Limits
           </h1>
-          <AnimatedBox client:load>
-            <p class="md:w-2/4 text-[18px] mt-4 md:mt-0 text-[#b3b3b3]">
+          <p class="lg:w-2/4 md:w-[90%] md:text-center lg:text-end  text-[18px] mt-4 lg:mt-0 text-[#b3b3b3]">
               We pride ourselves on delivering impactful results. Our campaigns
               have achieved a 30% increase in client engagement, highlighting
               our digital marketing expertise. Join the successful agencies that
               trust us to enhance their brand presence.
-            </p>
-          </AnimatedBox>
+          </p>
         </div>
-        <div class="min-h-[90vh] grid md:grid-cols-3 grid-cols-1 gap-8">
+        <div class="min-h-[90vh] grid lg:grid-cols-3 grid-cols-1 gap-8">
           <div class="bg-[#111111] rounded-2xl">
             <AnimatedBox client:load>
               <h2 class="mt-8 ml-10 font-bold">Client Engagement Boost</h2>
-              <p class="font-bold md:mt-[90%] mt-[15%] text-end mr-2">
-                <span class="md:text-7xl text-6xl block">80%</span>
+              <p class="font-bold lg:mt-[90%] mt-[15%] text-end mr-2">
+                <span class="md:text-7xl text-6xl block">
+                  <CountUpNum end={80} client:only /> %</span
+                >
                 <span class="md:text-base text-[14px] py-2 block">
                   Transforming engagement through innovative strategies and
                   design.
@@ -157,48 +160,52 @@ import { motion } from "motion/react";
           </div>
           <div class="flex flex-col">
             <div class="bg-[#111111] rounded-2xl h-[50%] mb-4">
-               <AnimatedBox client:load>
-                 <h2 class="mt-8 ml-10 font-bold">Conversion Rate Increase</h2>
-                 <p class="font-bold mt-[15%] text-end mr-2">
-                   <span class="md:text-7xl text-6xl block">95%</span>
-                   <span class="md:text-base text-[14px] py-2 block">
-                     Driving conversions with targeted marketing campaigns.
-                    </span>
-                  </p>
-                </AnimatedBox>
+              <AnimatedBox client:load>
+                <h2 class="mt-8 ml-10 font-bold">Conversion Rate Increase</h2>
+                <p class="font-bold mt-[15%] text-end mr-2">
+                  <span class="md:text-7xl text-6xl block">
+                    <CountUpNum end={95} client:only /> %</span
+                  >
+                  <span class="md:text-base text-[14px] py-2 block">
+                    Driving conversions with targeted marketing campaigns.
+                  </span>
+                </p>
+              </AnimatedBox>
             </div>
             <div class="bg-[#111111] rounded-2xl h-[50%] mt-4">
-               <AnimatedBox client:load>      
-                 <img
-                 class="w-full h-full"
-                 src="/HeroStats01.avif"
-                 alt="herostats"
-                 />
-                </AnimatedBox>
+              <AnimatedBox client:load>
+                <img
+                  class="w-full h-full"
+                  src="/HeroStats01.avif"
+                  alt="herostats"
+                />
+              </AnimatedBox>
             </div>
           </div>
           <div class="flex flex-col">
             <div class="bg-[#111111] rounded-2xl h-[50%] mt-4">
-               <AnimatedBox client:load>        
-                 <img
-                 class="w-full h-full"
-                 src="/HeroStats02.avif"
-                 alt="herostats"
-                 />
-                </AnimatedBox>
+              <AnimatedBox client:load>
+                <img
+                  class="w-full h-full"
+                  src="/HeroStats02.avif"
+                  alt="herostats"
+                />
+              </AnimatedBox>
             </div>
             <div class="bg-[#111111] rounded-2xl h-[50%] mb-4">
-               <AnimatedBox client:load>
-                 <h2 class="mt-8 ml-10 font-bold">
-                   Successful Campaigns Delivered
-                  </h2>
-                  <p class="font-bold mt-[15%] text-end mr-2">
-                    <span class="md:text-7xl text-6xl block">250+</span>
-                    <span class="md:text-base text-[14px] py-2 block">
-                      Achieving success through strategic planning and execution.
-                    </span>
-                  </p>
-                </AnimatedBox>
+              <AnimatedBox client:load>
+                <h2 class="mt-8 ml-10 font-bold">
+                  Successful Campaigns Delivered
+                </h2>
+                <p class="font-bold mt-[15%] text-end mr-2">
+                  <span class="md:text-7xl text-6xl block">
+                    <CountUpNum end={250} client:only />+</span
+                  >
+                  <span class="md:text-base text-[14px] py-2 block">
+                    Achieving success through strategic planning and execution.
+                  </span>
+                </p>
+              </AnimatedBox>
             </div>
           </div>
         </div>

@@ -12,29 +12,42 @@ const Header = () => {
   }
   return (
     <div>
-      <header className="md:px-10 px-3">
+      <header className="md:px-10 px-3 text-white">
         <nav className="flex justify-between items-center">
           <h2 className="lg:w-24 w-[4.5rem] z-50">
-            <a href="/blog">
+            <a href="/">
               <img src="/logo.png" alt="logo" />
             </a>
           </h2>
           <div
             className={`${
               toggle ? `visible` : `hidden`
-            } py-5 md:py-0 absolute md:relative w-screen md:w-auto  bg-black md:bg-inherit opacity-95 z-40 left-7 md:left-0 top-20 md:top-0 flex flex-col md:flex md:flex-row text-[19px]`}
+            } py-5 md:py-0 absolute md:relative font-semibold w-screen md:w-auto  bg-black md:bg-inherit opacity-90 z-40 left-7 md:left-0 top-20 md:top-0 flex flex-col md:flex md:flex-row text-[19px]`}
           >
-            <a className="pt-2 md:pt-0" href="/blog">
+            <a
+              className="pt-2 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 md:pt-0"
+              href="/about"
+            >
               About
             </a>
-            <a className="md:mx-7 my-2 md:my-0" href="/about">
+            <a
+              className="md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
+              href="/about"
+            >
               Work
             </a>
-            <a href="/about">Blog</a>
-            <a className="md:mx-7 my-2 md:my-0" href="/about">
+            <a
+              className="hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200"
+              href="/about"
+            >
+              Blog
+            </a>
+            <a
+              className="md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
+              href="/about"
+            >
               Contact
             </a>
-            <a href="/about">Pricing</a>
           </div>
           <div className="hidden md:flex">
             <a href="/" target="_blank">
