@@ -1,11 +1,14 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import Header from "../components/Header.jsx";
 import Project from "../components/Project.astro";
 import Services from "../components/Services.astro";
 import Blog from "../components/Blog.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import AnimatedBox from "../components/AnimatedBox";
+import FadeInBox from "../components/FadeInBox";
+import { motion } from "motion/react";
 ---
 
 <!doctype html>
@@ -14,68 +17,85 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header />
-    <main class="flex flex-col md:px-10 px-4">
+    <Header client:load />
+    <main class="flex flex-col md:px-10 px-4 text-white">
       <section class="min-h-screen md:py-10 text-white bg-[#111111]">
         <div class="flex md:flex-row flex-col md:py-16 py-5 justify-between">
           <div class="flex flex-col md:w-[40%] md:mx-auto px-6">
-            <h1
-              class="md:text-7xl text-[37px] md:leading-24 font-black uppercase"
-            >
-              Digital Marketing <span
-                class="dark:bg-white dark:text-black rounded-xl px-2"
-                >Experts.</span
+            <AnimatedBox client:load>
+              <h1
+                class="md:text-7xl text-[37px] md:leading-24 font-black uppercase"
               >
-            </h1>
-            <p
-              class="dark:text-[#b3b3b3] text-[19px] my-3 leading-tight md:my-5"
-            >
-              Discover the power of Noira, the ultimate Webflow template
-              designed for digital marketing agencies.
-            </p>
-            <div class="flex md:flex-row flex-col">
-              <img class="w-full md:hidden my-3" src="/hero001.avif" alt="" />
-              <a
-                class="bg-black text-white dark:bg-white dark:text-black rounded-2xl w-32 md:w-auto px-4 py-2"
-                href="">Book a Call</a
-              >
-              <a
-                class="md:ml-14 border w-40 md:w-auto mt-5 md:mt-0 rounded-2xl px-4 py-2"
-                href="">View Services</a
-              >
-            </div>
+                Digital Marketing <span
+                  class="bg-white text-black rounded-xl px-2">Experts.</span
+                >
+              </h1>
+              <p class="text-[#b3b3b3] text-[19px] my-3 leading-tight md:my-5">
+                Discover the power of Noira, the ultimate Webflow template
+                designed for digital marketing agencies.
+              </p>
+            </AnimatedBox>
+            <FadeInBox client:load>
+              <div class="flex md:flex-row flex-col">
+                <img class="w-full md:hidden my-3" src="/hero001.avif" alt="" />
+                <a
+                  class="bg-black text-white rounded-2xl w-32 md:w-auto px-4 py-2"
+                  href="">Book a Call</a
+                >
+                <a
+                  class="md:ml-14 border w-40 md:w-auto mt-5 md:mt-0 rounded-2xl px-4 py-2"
+                  href="">View Services</a
+                >
+              </div>
+            </FadeInBox>
           </div>
           <div class="md:w-2/4">
-            <div class="px-10">
-              <img
-                class="w-full hidden md:flex"
-                src="/hero001.avif"
-                alt="hero"
-              />
-              <ul class="grid md:grid-cols-3 grid-cols-2 gap-y-4 mt-7 text-sm">
-                <li class="rounded-2xl w-fit px-3 py-1 border border-gray-700">
-                  Email Marketing
-                </li>
-                <li class="rounded-2xl w-fit px-3 py-1 border border-gray-700">
-                  Social Media
-                </li>
-                <li class="rounded-2xl w-fit px-3 py-1 border border-gray-700">
-                  SEO Services
-                </li>
-                <li class="rounded-2xl w-fit px-3 py-1 border border-gray-700">
-                  Content Creation
-                </li>
-                <li class="rounded-2xl w-fit px-3 py-1 border border-gray-700">
-                  Digital Marketing
-                </li>
-                <li class="rounded-2xl w-fit px-3 py-1 border border-gray-700">
-                  Brand Strategy
-                </li>
-              </ul>
-            </div>
+            <FadeInBox client:load>
+              <div class="px-10">
+                <img
+                  class="w-full hidden md:flex"
+                  src="/hero001.avif"
+                  alt="hero"
+                />
+                <ul
+                  class="grid md:grid-cols-3 grid-cols-2 gap-y-4 mt-7 text-sm"
+                >
+                  <li
+                    class="rounded-2xl w-fit px-3 py-1 border border-gray-700"
+                  >
+                    Email Marketing
+                  </li>
+                  <li
+                    class="rounded-2xl w-fit px-3 py-1 border border-gray-700"
+                  >
+                    Social Media
+                  </li>
+                  <li
+                    class="rounded-2xl w-fit px-3 py-1 border border-gray-700"
+                  >
+                    SEO Services
+                  </li>
+                  <li
+                    class="rounded-2xl w-fit px-3 py-1 border border-gray-700"
+                  >
+                    Content Creation
+                  </li>
+                  <li
+                    class="rounded-2xl w-fit px-3 py-1 border border-gray-700"
+                  >
+                    Digital Marketing
+                  </li>
+                  <li
+                    class="rounded-2xl w-fit px-3 py-1 border border-gray-700"
+                  >
+                    Brand Strategy
+                  </li>
+                </ul>
+              </div>
+            </FadeInBox>
           </div>
         </div>
-        <h2 class="font-bold md:ml-[4rem] ml-10 dark:text-[#b3b3b3]">
+        <h2 class="font-bold md:ml-[4rem] ml-10 text-[#b3b3b3]">
           Trusted by top brands worldwide
         </h2>
         <ul class="flex items-center py-4 md:ml-[4rem]">
@@ -110,64 +130,75 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
           <h1
             class="md:text-[38px] text-4xl leading-12 font-black w-[95%] md:w-[37%]"
           >
-            <span class="dark:bg-white dark:text-black rounded-xl px-2"
-              >Helping.</span
-            > Companies grow beyond their Limits
+            <span class="bg-white text-black rounded-xl px-2">Helping.</span> Companies
+            grow beyond their Limits
           </h1>
-          <p class="md:w-2/4 text-[18px] mt-4 md:mt-0 text-[#b3b3b3]">
-            We pride ourselves on delivering impactful results. Our campaigns
-            have achieved a 30% increase in client engagement, highlighting our
-            digital marketing expertise. Join the successful agencies that trust
-            us to enhance their brand presence.
-          </p>
+          <AnimatedBox client:load>
+            <p class="md:w-2/4 text-[18px] mt-4 md:mt-0 text-[#b3b3b3]">
+              We pride ourselves on delivering impactful results. Our campaigns
+              have achieved a 30% increase in client engagement, highlighting
+              our digital marketing expertise. Join the successful agencies that
+              trust us to enhance their brand presence.
+            </p>
+          </AnimatedBox>
         </div>
         <div class="min-h-[90vh] grid md:grid-cols-3 grid-cols-1 gap-8">
           <div class="bg-[#111111] rounded-2xl">
-            <h2 class="mt-8 ml-10 font-bold">Client Engagement Boost</h2>
-            <p class="font-bold md:mt-[90%] mt-[15%] text-end mr-2">
-              <span class="md:text-7xl text-6xl block">80%</span>
-              <span class="md:text-base text-[14px] py-2 block">
-                Transforming engagement through innovative strategies and
-                design.
-              </span>
-            </p>
+            <AnimatedBox client:load>
+              <h2 class="mt-8 ml-10 font-bold">Client Engagement Boost</h2>
+              <p class="font-bold md:mt-[90%] mt-[15%] text-end mr-2">
+                <span class="md:text-7xl text-6xl block">80%</span>
+                <span class="md:text-base text-[14px] py-2 block">
+                  Transforming engagement through innovative strategies and
+                  design.
+                </span>
+              </p>
+            </AnimatedBox>
           </div>
           <div class="flex flex-col">
             <div class="bg-[#111111] rounded-2xl h-[50%] mb-4">
-              <h2 class="mt-8 ml-10 font-bold">Conversion Rate Increase</h2>
-              <p class="font-bold mt-[15%] text-end mr-2">
-                <span class="md:text-7xl text-6xl block">95%</span>
-                <span class="md:text-base text-[14px] py-2 block">
-                  Driving conversions with targeted marketing campaigns.
-                </span>
-              </p>
+               <AnimatedBox client:load>
+                 <h2 class="mt-8 ml-10 font-bold">Conversion Rate Increase</h2>
+                 <p class="font-bold mt-[15%] text-end mr-2">
+                   <span class="md:text-7xl text-6xl block">95%</span>
+                   <span class="md:text-base text-[14px] py-2 block">
+                     Driving conversions with targeted marketing campaigns.
+                    </span>
+                  </p>
+                </AnimatedBox>
             </div>
             <div class="bg-[#111111] rounded-2xl h-[50%] mt-4">
-              <img
-                class="w-full h-full"
-                src="/HeroStats01.avif"
-                alt="herostats"
-              />
+               <AnimatedBox client:load>      
+                 <img
+                 class="w-full h-full"
+                 src="/HeroStats01.avif"
+                 alt="herostats"
+                 />
+                </AnimatedBox>
             </div>
           </div>
           <div class="flex flex-col">
             <div class="bg-[#111111] rounded-2xl h-[50%] mt-4">
-              <img
-                class="w-full h-full"
-                src="/HeroStats02.avif"
-                alt="herostats"
-              />
+               <AnimatedBox client:load>        
+                 <img
+                 class="w-full h-full"
+                 src="/HeroStats02.avif"
+                 alt="herostats"
+                 />
+                </AnimatedBox>
             </div>
             <div class="bg-[#111111] rounded-2xl h-[50%] mb-4">
-              <h2 class="mt-8 ml-10 font-bold">
-                Successful Campaigns Delivered
-              </h2>
-              <p class="font-bold mt-[15%] text-end mr-2">
-                <span class="md:text-7xl text-6xl block">250+</span>
-                <span class="md:text-base text-[14px] py-2 block">
-                  Achieving success through strategic planning and execution.
-                </span>
-              </p>
+               <AnimatedBox client:load>
+                 <h2 class="mt-8 ml-10 font-bold">
+                   Successful Campaigns Delivered
+                  </h2>
+                  <p class="font-bold mt-[15%] text-end mr-2">
+                    <span class="md:text-7xl text-6xl block">250+</span>
+                    <span class="md:text-base text-[14px] py-2 block">
+                      Achieving success through strategic planning and execution.
+                    </span>
+                  </p>
+                </AnimatedBox>
             </div>
           </div>
         </div>

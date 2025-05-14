@@ -1,21 +1,27 @@
 ---
-const today = new Date();
+import FadeInBox from "./FadeInBox";
 ---
 
-<footer class="footer bg-[#111111] min-h-screen mt-32 mb-10 rounded-2xl md:p-16 p-8">
+<footer
+  class="footer bg-[#111111] min-h-screen mt-32 mb-10 rounded-2xl md:p-16 p-8"
+>
   <div class="flex md:flex-row flex-col justify-between">
     <div class="md:w-2/4">
-      <h1 class="md:text-7xl text-4xl md:leading-24 font-black uppercase">
-        Let's work <span class="dark:bg-white dark:text-black rounded-xl px-2"
-          >together</span
-        >
-      </h1>
-      <p class="md:text-[18px] text-base mt-6">
-        Discover innovative solutions tailored for your digital marketing needs
-        and watch your business thrive.
-      </p>
+      <FadeInBox client:load>
+        <h1 class="md:text-7xl text-4xl md:leading-24 font-black uppercase">
+          Let's work <span class="bg-white text-black rounded-xl px-2"
+            >together</span
+          >
+        </h1>
+        <p class="md:text-[18px] text-base mt-6">
+          Discover innovative solutions tailored for your digital marketing
+          needs and watch your business thrive.
+        </p>
+      </FadeInBox>
     </div>
-    <div class="flex md:flex-row flex-col mt-10 md:my-0 justify-between text-[17px]">
+    <div
+      class="flex md:flex-row flex-col mt-10 md:my-0 justify-between text-[17px]"
+    >
       <ul class="flex flex-col mr-20">
         <li>Services</li>
         <li class="my-3">About</li>
@@ -39,9 +45,11 @@ const today = new Date();
     <p class="md:text-end text-[17px]">
       <span class="text-[#b3b3b3]">Trusted by</span> 500+ Companies
     </p>
-    <div class="text-[16px] mt-10 flex flex-col-reverse md:flex-row justify-between">
+    <div
+      class="text-[16px] mt-10 flex flex-col-reverse md:flex-row justify-between"
+    >
       <p class="my-2 md:my-0">© LamiCode. All rights reserved.</p>
-      <p class="flex ">
+      <p class="flex">
         <span>Style Guide</span>
         <span class="md:mx-3 mx-5">Licences</span>
         <span>Changelog</span>

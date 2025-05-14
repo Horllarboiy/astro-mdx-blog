@@ -1,66 +1,78 @@
+---
+import FadeInBox from "./FadeInBox";
+import AnimatedBox from "./AnimatedBox";
+---
+
 <div>
-  <div class="flex md:flex-row flex-col md:justify-between">
-    <h1 class="md:text-[39px] text-[34px] font-black">
-      <span class="dark:bg-white dark:text-black rounded-xl px-4 py-1"
-        >Insights</span
-      > from Our Experts
-      <span class="block text-[17px] mt-3"
-        >Explore our latest articles on digital marketing strategies.</span
-      >
-    </h1>
-    <button>
-      <a
-        class="block w-2/5 md:w-auto mt-5 md:mt-0 bg-white text-black px-4 py-2 rounded-xl"
-        href="http://">Read More</a
-      >
-    </button>
-  </div>
+  <FadeInBox client:load>
+    <div class="flex md:flex-row flex-col md:justify-between">
+      <h1 class="md:text-[39px] text-[34px] font-black">
+        <span class="bg-white text-black rounded-xl px-4 py-1">Insights</span> from
+        Our Experts
+        <span class="block text-[17px] mt-3"
+          >Explore our latest articles on digital marketing strategies.</span
+        >
+      </h1>
+      <button>
+        <a
+          class="block w-2/5 md:w-auto mt-5 md:mt-0 bg-white text-black px-4 py-2 rounded-xl"
+          href="http://">Read More</a
+        >
+      </button>
+    </div>
+  </FadeInBox>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 mt-14">
     <div class="bg-[#111111] rounded-sm p-6">
-      <img class="h-60 w-full" src="/HeroStats02.avif" alt="herostats" />
-      <p class="flex text-[17px] my-4">
-        <span class="border-[0.4px] border-gray-600 px-2">Affliate</span>
-        <span class="ml-4">8 min</span>
-      </p>
-      <h2 class="font-bold text-[21px]">
-        Top Strategies for Email Marketing Campaigns
-      </h2>
-      <p class="text-base mt-4">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus odit
-        voluptatum sit sequi quaerat quibusdam distinctio nobis perferendis
-        consectetur sunt.
-      </p>
+      <AnimatedBox client:load>
+        <img class="h-60 w-full" src="/HeroStats02.avif" alt="herostats" />
+        <p class="flex text-[17px] my-4">
+          <span class="border-[0.4px] border-gray-600 px-2">Affliate</span>
+          <span class="ml-4">8 min</span>
+        </p>
+        <h2 class="font-bold text-[21px]">
+          Top Strategies for Email Marketing Campaigns
+        </h2>
+        <p class="text-base mt-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus odit
+          voluptatum sit sequi quaerat quibusdam distinctio nobis perferendis
+          consectetur sunt.
+        </p>
+      </AnimatedBox>
     </div>
     <div class="bg-[#111111] rounded-sm p-6">
-      <img class="h-60 w-full" src="/HeroStats02.avif" alt="herostats" />
-      <p class="flex text-[17px] my-4">
-        <span class="border-[0.4px] border-gray-600 px-2">Affliate</span>
-        <span class="ml-4">8 min</span>
-      </p>
-      <h2 class="font-bold text-[21px]">
-        Top Strategies for Email Marketing Campaigns
-      </h2>
-      <p class="text-base mt-4">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus odit
-        voluptatum sit sequi quaerat quibusdam distinctio nobis perferendis
-        consectetur sunt.
-      </p>
+      <AnimatedBox client:load>
+        <img class="h-60 w-full" src="/HeroStats02.avif" alt="herostats" />
+        <p class="flex text-[17px] my-4">
+          <span class="border-[0.4px] border-gray-600 px-2">Affliate</span>
+          <span class="ml-4">8 min</span>
+        </p>
+        <h2 class="font-bold text-[21px]">
+          Top Strategies for Email Marketing Campaigns
+        </h2>
+        <p class="text-base mt-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus odit
+          voluptatum sit sequi quaerat quibusdam distinctio nobis perferendis
+          consectetur sunt.
+        </p>
+      </AnimatedBox>
     </div>
     <div class="bg-[#111111] rounded-sm p-6">
-      <img class="h-60 w-full" src="/HeroStats02.avif" alt="herostats" />
-      <p class="flex text-[17px] my-4">
-        <span class="border-[0.4px] border-gray-600 px-2">Affliate</span>
-        <span class="ml-4">8 min</span>
-      </p>
-      <h2 class="font-bold text-[21px]">
-        Top Strategies for Email Marketing Campaigns
-      </h2>
-      <p class="text-base mt-4">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus odit
-        voluptatum sit sequi quaerat quibusdam distinctio nobis perferendis
-        consectetur sunt.
-      </p>
+      <AnimatedBox client:load>
+        <img class="h-60 w-full" src="/HeroStats02.avif" alt="herostats" />
+        <p class="flex text-[17px] my-4">
+          <span class="border-[0.4px] border-gray-600 px-2">Affliate</span>
+          <span class="ml-4">8 min</span>
+        </p>
+        <h2 class="font-bold text-[21px]">
+          Top Strategies for Email Marketing Campaigns
+        </h2>
+        <p class="text-base mt-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus odit
+          voluptatum sit sequi quaerat quibusdam distinctio nobis perferendis
+          consectetur sunt.
+        </p>
+      </AnimatedBox>
     </div>
   </div>
 </div>
