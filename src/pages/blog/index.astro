@@ -21,8 +21,8 @@ const trendingPost = (await getCollection("trending")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header />
-    <main class="flex flex-col md:px-14 px-4">
+    <Header client:load />
+    <main class="flex flex-col md:px-14 px-4 text-white">
       <section>
         <div class="text-center my-20">
           <h1 class="md:text-5xl text-[37px] font-black uppercase">
@@ -49,11 +49,11 @@ const trendingPost = (await getCollection("trending")).sort(
                 <a class="trending-link" href={`/blog/${post.id}/`}>
                   <img src={post.data.heroImage} alt="" />
                   <div class="mx-4">
-                    <h3 class="title font-black text-xl my-2">
+                    <h3 class="title font-semibold text-xl my-2">
                       {post.data.title}
                     </h3>
                     <h4 class=" lg:hidden">{post.data.description}</h4>
-                    <h5 class="md:my-2 my-1 text-[17px] w-fit px-2 ">#{post.data.tag}</h5>
+                    <h5 class="md:my-2 my-3 text-[17px] w-fit px-2 ">#{post.data.tag}</h5>
                     <p class="text-base font-light flex">
                       <span>by {post.data.author}</span>
                       <span class="date ml-20">

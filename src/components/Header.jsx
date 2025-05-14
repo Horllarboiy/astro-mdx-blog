@@ -26,24 +26,30 @@ const Header = () => {
           >
             <a
               className="pt-2 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 md:pt-0"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              className="pt-2 md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 md:pt-0"
               href="/about"
             >
               About
             </a>
             <a
-              className="md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
-              href="/"
+              className="hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
+              href="/work"
             >
               Work
             </a>
             <a
-              className="hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200"
+              className="md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200"
               href="/blog"
             >
               Blog
             </a>
             <a
-              className="md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
+              className=" hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
               href="/contact"
             >
               Contact
