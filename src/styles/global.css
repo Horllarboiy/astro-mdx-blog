@@ -58,7 +58,7 @@ body {
 }
 @keyframes scroll {
 	0% {
-		transform: translateX(0);
+		transform: translateX(0%);
 	}
 		100% {
 			transform: translateX(-100%);
@@ -110,7 +110,7 @@ body {
 	display: none;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 940px) {
 	body {
 		font-size: 18px;
 		color: var(--foreground);

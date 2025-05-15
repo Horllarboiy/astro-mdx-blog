@@ -1,0 +1,64 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.jsx";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import AnimatedBox from "../../components/AnimatedBox";
+import Faq from "../../components/Faq";
+import { FaFacebook, FaX, FaLinkedin, FaInstagram } from "react-icons/fa6";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header client:load />
+    <main class="flex flex-col md:px-10 px-4 text-white">
+      <section class="pt-20 bg-gradients">
+        <AnimatedBox client:load>
+          <div class="text-center lg:w-3/5 w-[90%] mx-auto">
+            <h1 class="md:text-5xl text-[37px] font-black uppercase">
+              let's<span class="bg-white text-black mx-2 rounded-xl px-3"
+                >talk</span
+              > Business
+            </h1>
+            <p
+              class="text-[#b3b3b3] text-[19px] my-4 leading-tight md:my-5 px-4"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </AnimatedBox>
+      </section>
+      <section class="py-20">
+        <form class="flex flex-col lg:w-2/5 w-[90%] mx-auto text-[#b3b3b3]">
+          <label class="text-[17px]" for="name">Name</label>
+          <input
+            class="border-0 outline-0 p-2 bg-[#111] mt-2"
+            type="text"
+            name=""
+            id="name"
+          />
+          <label class="text-[17px] mt-10" for="email">Email</label>
+          <input
+            class="border-0 outline-0 p-2 bg-[#111] mt-2"
+            type="email"
+            name=""
+            id="email"
+          />
+          <label class="text-[17px] mt-10" for="message">Message</label>
+          <textarea
+            class="border-0 outline-0 p-2 bg-[#111] mt-2 min-h-40"
+            name=""
+            id="message"
+          />
+
+          <button class="flex bg-white text-black justify-center my-7 rounded-2xl py-2">Submit</button>
+        </form>
+      </section>
+      <Faq client:load/>
+      <Footer />
+    </main>
+  </body>
+</html>

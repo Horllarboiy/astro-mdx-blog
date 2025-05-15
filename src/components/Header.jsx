@@ -32,19 +32,19 @@ const Header = () => {
             </a>
             <a
               className="md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
-              href="/about"
+              href="/"
             >
               Work
             </a>
             <a
               className="hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200"
-              href="/about"
+              href="/blog"
             >
               Blog
             </a>
             <a
               className="md:mx-7 hover:translate-x-3 md:hover:translate-x-0 transition-all duration-200 my-2 md:my-0"
-              href="/about"
+              href="/contact"
             >
               Contact
             </a>

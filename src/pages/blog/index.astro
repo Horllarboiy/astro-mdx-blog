@@ -24,25 +24,36 @@ const trendingPost = (await getCollection("trending")).sort(
     <Header />
     <main class="flex flex-col md:px-14 px-4">
       <section>
-        <h1
-          class="text-center text-3xl md:text-4xl mt-14 md:mt-32 mb-4 md:mb-7 font-black"
-        >
-          Top Stories
+        <div class="text-center my-20">
+          <h1 class="md:text-5xl text-[37px] font-black uppercase">
+            latest<span class="bg-white text-black mx-2 rounded-xl px-3"
+              >News</span
+            >& Updates
+          </h1>
+          <p class="text-[#b3b3b3] text-[19px] my-4 leading-tight md:my-5 px-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+
+      <h1 class="lg:text-4xl text-[28px] font-black uppercase mt-32 mb-4 lg:mb-10">
+          <span class="bg-white text-black mx-2 rounded-xl px-3"
+            >Latest</span
+          >Articles
         </h1>
         <ul
-          class="trending grid grid-cols-1 md:grid-cols-[2fr_1.5fr_1.5fr] md:gap-3"
+          class="trending grid grid-cols-1 lg:grid-cols-[2fr_1.5fr_1.5fr] lg:gap-3"
         >
           {
             trendingPost.map((post) => (
-              <li class="relative">
+              <li class="relative bg-[#111] py-4">
                 <a class="trending-link" href={`/blog/${post.id}/`}>
                   <img src={post.data.heroImage} alt="" />
-                  <div>
+                  <div class="mx-4">
                     <h3 class="title font-black text-xl my-2">
                       {post.data.title}
                     </h3>
-                    <h4 class=" md:hidden">{post.data.description}</h4>
-                    <h5 class="md:my-2 my-1 text-[18px]">#{post.data.tag}</h5>
+                    <h4 class=" lg:hidden">{post.data.description}</h4>
+                    <h5 class="md:my-2 my-1 text-[17px] w-fit px-2 ">#{post.data.tag}</h5>
                     <p class="text-base font-light flex">
                       <span>by {post.data.author}</span>
                       <span class="date ml-20">
